@@ -1,21 +1,25 @@
-require(
-    // La liste des module qui doivent être
-    // chargés avant d'initialiser le bazar
-    ['monModule', 'monAutreModule'],
+// Start the app
+require( [ 'app','variable'], function (  app, variable ) {
 
-    // La fonction qui sera lancée une fois
-    // les modules précédents chargés
-    function (monModule, monAutreModule) {
-        // L'initialisation des modules et
-        // de toute votre application ici
-    },
+    // Initialize our app and start the animation loop (animate is expected to call itself)
 
-    // Une fonction de gestion des erreurs
-    // de RequireJS (c-à-d s'il n'arrive pas
-    // a charger un fichier, quel qu’en soit
-    // la raison)
-    function (err) {
-        console.error('ERROR: ', err.requireType);
-        console.error('MODULES: ', err.requireModules);
+
+    window.onload = app.init();
+    app.animate();
+
+    function keyDown(event){
+        variable.keyboard[event.keyCode] = true;
+        if(event.keyCode == 32 && variable.pressed == 0)
+            variable.pressed = 1;
+        if(event.keyCode == 27 ){
+            variable.paused ==1 ?  variable.paused = 0 :  variable.paused = 1;
+            console.log("echec pressed")
+        }
+        if(event.keyCode == 13){
+           variable.gameReset = 1;
+        }
+
     }
-);
+    window.addEventListener('keydown', keyDown);
+
+} );
