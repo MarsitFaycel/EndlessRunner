@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de0d276e-fb96-43e0-922a-aaa43414090b" name="Default Changelist" comment="" />
+    <list default="true" id="de0d276e-fb96-43e0-922a-aaa43414090b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V2/src/input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/environnement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/lib/three.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/platformManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/player.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V3/winSystem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/ambientLight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/camera.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/meshFloor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/meshPlayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/pause.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/scene.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/score.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/updatePlayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/app/variable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/lib/Detector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/lib/domReady.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/lib/three.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/lib/three.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/shaders/shift.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/shaders/simple.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/proj/V4/js/shaders/simple.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,68 +48,143 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/proj/V2/src/demo.js">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="159">
+              <caret line="40" column="33" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libs/stats.min.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proj/V2/three.min.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/proj/V2/src/index.html">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/score.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="17">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/ambientLight.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="3" lean-forward="true" selection-end-line="4" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/renderer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/updatePlayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/meshPlayer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/variable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/camera.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="86" selection-start-line="1" selection-start-column="86" selection-end-line="1" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/proj/V4/js/app/light.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hit</find>
-      <find>updatePlayer</find>
-      <find>init</find>
-      <find>spawnBlock(i)</find>
-      <find>gameReset</find>
-      <find>playerS</find>
-      <find>win</find>
-      <find>blocknumber</find>
-      <find>reset</find>
-      <find>leng</find>
-      <find>block</find>
-      <find>anima</find>
-      <find>blocknumber</find>
-      <find>i</find>
-      <find>var i</find>
-      <find>updateP</find>
-      <find>stack</find>
-      <find>spawnBlock(i);</find>
-      <find>spawnBlock</find>
-      <find>upda</find>
-      <find>anim</find>
-      <find>blocknu</find>
-      <find>20</find>
-      <find>300</find>
-      <find>spawnBlock</find>
       <find>BoxGeometry</find>
       <find>floor</find>
       <find>F1C40F</find>
       <find>speed</find>
+      <find>positio</find>
+      <find>light</find>
       <find>camera</find>
+      <find>render</find>
+      <find>spawn</find>
+      <find>Tween</find>
+      <find>tween</find>
+      <find>Preloader</find>
+      <find>new</find>
+      <find>clock</find>
+      <find>renderer</find>
+      <find>var USE_WIREFRAME = false;</find>
+      <find>spawnPlayer</find>
+      <find>spa</find>
+      <find>spaw</find>
+      <find>container</find>
+      <find>pressed</find>
+      <find>geometry</find>
+      <find>playerScoreText</find>
+      <find>pressEnterToReset</find>
+      <find>player</find>
+      <find>mesh</find>
+      <find>variable.stack</find>
+      <find>stack</find>
+      <find>scene</find>
+      <find>checkBlockHit</find>
     </findStrings>
+    <replaceStrings>
+      <replace>this.scene</replace>
+      <replace>this.light</replace>
+      <replace>this.camera</replace>
+      <replace>this.renderer</replace>
+      <replace>this.stack</replace>
+      <replace>score.playerScoreText</replace>
+      <replace>pause.pressEnterToReset</replace>
+      <replace>meshPlayer</replace>
+      <replace>stack</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,13 +192,48 @@
         <option value="$PROJECT_DIR$/proj/v1/game.js" />
         <option value="$PROJECT_DIR$/proj/V2/src/index.html" />
         <option value="$PROJECT_DIR$/proj/V2/src/demo.js" />
+        <option value="$PROJECT_DIR$/proj/v1/index.html" />
+        <option value="$PROJECT_DIR$/proj/V3/environnement.js" />
+        <option value="$PROJECT_DIR$/proj/V3/player.js" />
+        <option value="$PROJECT_DIR$/proj/V3/winSystem.js" />
+        <option value="$PROJECT_DIR$/proj/V3/platformManager.js" />
+        <option value="$PROJECT_DIR$/proj/V3/main.js" />
+        <option value="$PROJECT_DIR$/proj/V3/index.html" />
+        <option value="$PROJECT_DIR$/proj/V4/app/app.js" />
+        <option value="$PROJECT_DIR$/proj/V4/app/camera.js" />
+        <option value="$PROJECT_DIR$/proj/V4/main.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/lib/config.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/container.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/geometry.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/materials.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/scene.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/light.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/ambientLight.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/meshFloor.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/material.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/lib/three.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/renderer.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/camera.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/USE_WIREFRAME.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/meshPlayer.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/lib/domReady.js" />
+        <option value="$PROJECT_DIR$/proj/V4/index.html" />
+        <option value="$PROJECT_DIR$/proj/V4/js/config.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/controls.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/main.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/score.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/pause.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/updatePlayer.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/variable.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/checkBlockHit.js" />
+        <option value="$PROJECT_DIR$/proj/V4/js/app/app.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="654" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="11" />
+    <option name="y" value="9" />
+    <option name="width" value="1172" />
     <option name="height" value="688" />
   </component>
   <component name="ProjectView">
@@ -101,37 +245,67 @@
         <subPane>
           <expand>
             <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
               <item name="proj" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
               <item name="proj" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
               <item name="proj" type="462c0819:PsiDirectoryNode" />
               <item name="V2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="endlessRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="endlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
               <item name="proj" type="462c0819:PsiDirectoryNode" />
-              <item name="V2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="V3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="V3" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="V4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="V4" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="V4" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EndlessRunner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EndlessRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="proj" type="462c0819:PsiDirectoryNode" />
+              <item name="V4" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -141,18 +315,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/proj/V2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proj/V4/js/app" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\endlessRunner\proj\V2" />
-      <recent name="C:\wamp\www\endlessRunner\proj\assets\fbx" />
-      <recent name="C:\wamp\www\endlessRunner\proj\assets" />
-      <recent name="C:\wamp\www\endlessRunner\proj\assets\fbx\_notes" />
-      <recent name="C:\wamp\www\endlessRunner\proj" />
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4\js\app" />
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4\js\lib" />
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4\js" />
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4\lib" />
+      <recent name="C:\Users\heisenberg\Desktop\gitEndless runner\EndlessRunner\proj\V4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -182,20 +361,29 @@
       <workItem from="1562668559067" duration="342000" />
       <workItem from="1562669658750" duration="11172000" />
       <workItem from="1562835087918" duration="4200000" />
+      <workItem from="1563182988368" duration="9246000" />
+      <workItem from="1563196968396" duration="1962000" />
+      <workItem from="1563268581927" duration="2353000" />
+      <workItem from="1563356066343" duration="13235000" />
+      <workItem from="1563441301407" duration="5747000" />
+      <workItem from="1563447476257" duration="8757000" />
+      <workItem from="1563527205244" duration="134000" />
+      <workItem from="1563527636234" duration="15803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36994000" />
+    <option name="totallyTimeSpent" value="94231000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="11" y="9" width="1172" height="688" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24867725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291367" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -203,7 +391,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -222,30 +410,258 @@
     <entry file="file://$PROJECT_DIR$/proj/V2/src/helvetiker_bold.typeface.json" />
     <entry file="file://$PROJECT_DIR$/proj/V2/README.md" />
     <entry file="file://$PROJECT_DIR$/proj/V2/src/texture.jpg" />
-    <entry file="file://$PROJECT_DIR$/proj/v1/game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4804">
-          <caret line="322" column="48" selection-start-line="322" selection-start-column="44" selection-end-line="322" selection-end-column="48" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/libs/stats.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/proj/V2/three.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/stats.min.js">
+    <entry file="file://$PROJECT_DIR$/proj/V2/src/input.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/assets/losttreasure-og.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/lib/three.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V2/src/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10472">
+          <caret line="616" column="1" selection-start-line="442" selection-end-line="616" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/proj/V2/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/proj/V2/src/demo.js">
+    <entry file="file://$PROJECT_DIR$/proj/v1/game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/platformManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="210" selection-start-line="210" selection-end-line="210" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/winSystem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/v1/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="95" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-762">
+          <caret line="124" column="9" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/environnement.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/lib/three.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/shaders/shift.glsl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="4" selection-end-line="5" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/container.js" />
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/require.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="1430" column="62" selection-start-line="1430" selection-start-column="62" selection-end-line="1430" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/USE_WIREFRAME.js" />
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/lib/controls/TrackballControls.js" />
+    <entry file="file://$PROJECT_DIR$/proj/V4/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/geometry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/material.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="103" selection-start-column="103" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/lib/domReady.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/lib/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/lib/Detector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/scene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/meshFloor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/pause.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/checkBlockHit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="32" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/variable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/score.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/meshPlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/camera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="86" selection-start-line="1" selection-start-column="86" selection-end-line="1" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/light.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/ambientLight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="true" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/renderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/updatePlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proj/V4/js/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="40" column="33" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="33" />
         </state>
       </provider>
     </entry>
