@@ -10,6 +10,7 @@ define( [], function () {
         playerScore : 0,
         player :{ height:1.8, speed:1, turnSpeed:Math.PI*0.02, direction:0, downSpeed:0.0001 },
 stack:{},
+        playerdiff: {debutant:"debutant",intermediaire:"intermediaire", difficile:"difficile"},
     };
     return variable;
 } );

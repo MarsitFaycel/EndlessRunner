@@ -1,5 +1,5 @@
-define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pause","score","updatePlayer"],
-    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pause,score,updatePlayer) {
+define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pause","score","updatePlayer","diff","controls"],
+    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pause,score,updatePlayer,diff,controls) {
         var app = {
             //meshes: [],
                 stack: [],
@@ -37,6 +37,7 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                     requestAnimationFrame(app.pause);
                 }
                 score.score();
+                diff.diff();
                 updatePlayer.updatePlayer();
                 app.checkBlockHit();
 
@@ -61,7 +62,7 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                     //player.speed = player.speed + GRAVITY_RATE*timeDead;
                 }
 
-
+                    controls();
                 //window.requestAnimationFrame( app.animate );
                 //controls.update();
                 //window.requestAnimationFrame( app.animate );
