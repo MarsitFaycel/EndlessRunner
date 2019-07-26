@@ -19,7 +19,7 @@ var require = {
         // --- end THREE sub-components
         //detector: '../lib/Detector',
         domready: '../lib/domReady',
-        //stats: '../lib/stats.min',
+        stats: '../lib/stats',
         // Require.js plugins
         //text: '../lib/text',
         //shader: '../lib/shader',

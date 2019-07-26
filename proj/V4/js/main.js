@@ -1,11 +1,17 @@
 // Start the app
-require( [ 'app','variable','diff'], function (  app, variable, diff ) {
+require( [ 'app','variable','diff','stat'], function (  app, variable, diff,stat ) {
 
     // Initialize our app and start the animation loop (animate is expected to call itself)
 
+    window.addEventListener('keydown', keyDown);
+    window.addEventListener('keyup', keyUp);
+    window.addEventListener('click', diff.facile);
+
+    //stat.showPanel( 1); // 0: fps, 1: ms, 2: mb, 3+: custom
 
     window.onload = app.init();
     app.animate();
+
 
     function keyDown(event){
         variable.keyboard[event.keyCode] = true;
@@ -25,49 +31,8 @@ require( [ 'app','variable','diff'], function (  app, variable, diff ) {
         if(event.keyCode == 32 && variable.pressed == 2)
             variable.pressed = 0;
     }
-    function facile(event){
-
-        let button = event.target ;
 
 
-        if(button.innerHTML === "facile"){
-            diff.playerdiffText.innerHTML= "difficulté:"
-            diff.playerdiffText.innerHTML+= "facile";
-            document.body.removeChild(diff.Facile);
-            document.body.removeChild(diff.Intermed);
-            document.body.removeChild(diff.Diff);
-
-        }else if(button.innerHTML === "Intermediaire"){
-            diff.playerdiffText.innerHTML= "difficulté:";
-            diff.playerdiffText.innerHTML+= "Intermediaire";
-            variable.player.speed = 2;
-            document.body.removeChild(diff.Facile);
-            document.body.removeChild(diff.Intermed);
-            document.body.removeChild(diff.Diff);
-
-            console.log(event.target)
-        }else if (button.innerHTML === "Difficile") {
-
-            diff.playerdiffText.innerHTML= "difficulté:";
-            diff.playerdiffText.innerHTML+= "Difficile";
-            variable.player.speed = 3;
-            document.body.removeChild(diff.Facile);
-            document.body.removeChild(diff.Intermed);
-            document.body.removeChild(diff.Diff);
-            console.log(event.target)
-        }else{
-            event.stopPropagation();
-        }
-        //console.log(event.target)
-
-
-
-
-    }
-
-    window.addEventListener('keydown', keyDown);
-    window.addEventListener('keyup', keyUp);
-    window.addEventListener('click', facile);
 
 
 } );

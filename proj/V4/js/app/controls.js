@@ -12,6 +12,8 @@ define( ["three", "scene","variable","camera"], function ( THREE, scene ,variabl
         //camera.position.x -= Math.sin(camera.rotation.y) * player.speed;
         //camera.position.z -= -Math.cos(camera.rotation.y) * player.speed;
     }
+    /* contol Camera*/
+        /*
     if(variable.keyboard[30]) { // Z key up
         camera.position.x -= Math.sin(camera.rotation.y) * variable.player.speed;
         camera.position.z -= -Math.cos(camera.rotation.y) * variable.player.speed;
@@ -36,6 +38,10 @@ define( ["three", "scene","variable","camera"], function ( THREE, scene ,variabl
     if(variable.keyboard[39]) { // right arrow key
         camera.rotation.y += variable.player.turnSpeed;
 
-    }};
+    }
+    */
+
+    };
+
     return controls;
 });

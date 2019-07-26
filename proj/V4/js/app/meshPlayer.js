@@ -1,4 +1,4 @@
-define( ["three", "camera","scene","variable"], function ( THREE, camera,scene,variable ){
+define( ["three", "camera","variable"], function ( THREE, camera,variable ){
 
    var  meshPlayer = new THREE.Mesh(
         new THREE.SphereGeometry(1,16,16),
@@ -10,7 +10,7 @@ define( ["three", "camera","scene","variable"], function ( THREE, camera,scene,v
     meshPlayer.receiveShadow = true;
     meshPlayer.castShadow = true;
     //meshPlayer.add(camera);
-    scene.add(meshPlayer);
+
 
     return meshPlayer;
 } );

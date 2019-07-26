@@ -83,7 +83,46 @@ define( ["three", "scene","variable"], function ( THREE, scene, variable ) {
 
              */
 
+        },
+         facile: function(event){
+
+        let button = event.target ;
+
+
+        if(button.innerHTML === "facile"){
+            diff.playerdiffText.innerHTML= "difficulté:"
+            diff.playerdiffText.innerHTML+= "facile";
+            document.body.removeChild(diff.Facile);
+            document.body.removeChild(diff.Intermed);
+            document.body.removeChild(diff.Diff);
+
+        }else if(button.innerHTML === "Intermediaire"){
+            diff.playerdiffText.innerHTML= "difficulté:";
+            diff.playerdiffText.innerHTML+= "Intermediaire";
+            variable.player.speed = 2;
+            document.body.removeChild(diff.Facile);
+            document.body.removeChild(diff.Intermed);
+            document.body.removeChild(diff.Diff);
+
+            console.log(event.target)
+        }else if (button.innerHTML === "Difficile") {
+
+            diff.playerdiffText.innerHTML= "difficulté:";
+            diff.playerdiffText.innerHTML+= "Difficile";
+            variable.player.speed = 3;
+            document.body.removeChild(diff.Facile);
+            document.body.removeChild(diff.Intermed);
+            document.body.removeChild(diff.Diff);
+            console.log(event.target)
+        }else{
+            event.stopPropagation();
         }
+        //console.log(event.target)
+
+
+
+
+    }
     };
 
 

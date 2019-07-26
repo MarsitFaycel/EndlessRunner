@@ -7,6 +7,7 @@ define( ["three", "scene","variable"], function ( THREE, scene, variable ) {
             if (score.playerScoreText == null) {
                 score.playerScoreText = document.createElement('div');
                 score.playerScoreText.style.position = 'absolute';
+                score.playerScoreText.id="score";
                 //score.playerScoreText.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
                 score.playerScoreText.style.width = 100;
                 score.playerScoreText.style.height = 100;
@@ -17,7 +18,7 @@ define( ["three", "scene","variable"], function ( THREE, scene, variable ) {
                 //score.playerScoreText.style.top = window.innerWidth/2 + 'px';
                 //score.playerScoreText.style.left = window.innerHeight/2 + 'px';
 
-                score.playerScoreText.style.top = 50 + 'px';
+               score.playerScoreText.style.top = 50 + 'px';
                 score.playerScoreText.style.left = window.innerWidth - 160 + 'px';
                 document.body.appendChild(score.playerScoreText);
             } else {
