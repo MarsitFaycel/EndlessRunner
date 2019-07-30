@@ -8,7 +8,9 @@ var require = {
         'TrackballControls': { deps: ['threeCore'], exports: 'THREE' },
         // --- end THREE sub-components
         'detector': { exports: 'Detector' },
-        'stats': { exports: 'Stats' }
+        'stats': { exports: 'Stats' },
+        'mtLoader' : { exports: 'mTLLoader'},
+        'objLoader' : { exports: 'objLoader'}
     },
     // Third party code lives in js/lib
     paths: {
@@ -20,6 +22,8 @@ var require = {
         //detector: '../lib/Detector',
         domready: '../lib/domReady',
         stats: '../lib/stats',
+        mTLLoader: '../lib/MTLLoader',
+        objLoader: '../lib/OBJLoader',
         // Require.js plugins
         //text: '../lib/text',
         //shader: '../lib/shader',

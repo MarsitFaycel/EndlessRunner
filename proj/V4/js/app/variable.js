@@ -13,5 +13,11 @@ define( [], function () {
         player :{ height:1.8, speed:1, turnSpeed:Math.PI*0.02, direction:0, downSpeed:0.0001 },
         playerdiff: {debutant:"debutant",intermediaire:"intermediaire", difficile:"difficile"},
         timeDead :0,
+        instructions : document.getElementById('instructions'),
+        jeux: document.getElementById('Jeux'),
+        Facile: document.getElementById('Facile'),
+        Difficile: document.getElementById('Difficile'),
+        Intermediaire: document.getElementById('Intermediaire'),
+        start:0,
     };
 } );

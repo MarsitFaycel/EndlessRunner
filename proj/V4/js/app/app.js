@@ -26,15 +26,22 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                 scene.add(startZone);
                 scene.add(ambientLight);
                 scene.add(light);
+                variable.instructions.innerHTML = "<strong>Click to Play!</strong> </br></br> TAB Key  =change direction ";
 
+                window.addEventListener('resize', app.onWindowResize, false);
 
                 document.body.appendChild(renderer.domElement);
+                //document.getElementById("Jeux").appendChild(renderer.domElement);
+
            },
             animate: function () {
+
+
+
                 stat.begin()
 
                 const GRAVITY_RATE = -9.81;
-                if(variable.paused == 0){
+                if(variable.paused == 0 ){
                    pauseMenu(0);
                     requestAnimationFrame(app.animate);
                 }
@@ -96,14 +103,25 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
 
                  stat.begin()
             if(variable.paused == 0){
+                variable.jeux.innerHTML = "Play" ;
+
                 requestAnimationFrame(app.animate);
             }
             if(variable.paused == 1){
+                variable.jeux.innerHTML = "Pause" ;
+
                 requestAnimationFrame(app.pause);
+
             }
                  stat.end()
 
         },
+            onWindowResize: function () {
+              camera.aspect = window.innerWidth / window.innerHeight;
+              camera.updateProjectionMatrix();
+
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
 
 
 

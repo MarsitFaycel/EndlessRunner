@@ -6,7 +6,7 @@ define(["variable"], function (variable) {
             variable.pressEnterToReset = document.createElement('div');
             variable.pressEnterToReset.style.position = 'absolute';
             //pause.pressEnterToReset.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
-            variable.pressEnterToReset.style.width = 100;
+            variable.pressEnterToReset.style.width = 60+"%";
             variable.pressEnterToReset.style.height = 100;
             variable.pressEnterToReset.style.opacity = 0.7;
             variable.pressEnterToReset.style.fontSize = "xx-large";

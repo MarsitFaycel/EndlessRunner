@@ -2,22 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"> <!-- fix delay on google chrome -->
 
+    <link rel="stylesheet" href="css/style.css">
     <title>demo4 three js et AMD</title>
 
     <script src="js/config.js"></script>
     <script data-main="../main" src="js/require.js"></script>
 </head>
 <body>
-<div id="container">
-    <script>
 
 
-    </script>
+<!--
+<div id="difficulte"> Difficulte</div>
+<div id ='Intermediaire'> Intermediaire</div>
+<div id="Difficile"> Difficile</div>
+<div id="Facile"> Facile</div>
 
+<div id='container'> </div>-->
+<div id="Difficulte"> Difficulte</div>
+<div class="flex-box-2"id="but">
+    <button id="Facile">Facile</button>
+        <button id ='Intermediaire'> Intermediaire</button>
+    <button id="Difficile"> Difficile</button>
+</div>
+<div id="Jeux"> Play</div>
 
+<div id="Score">score!!</div>
 
-
+<div id="instructions">
+    <strong>Loading...</strong>
 </div>
 </body>
 </html>

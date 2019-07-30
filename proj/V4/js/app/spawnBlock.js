@@ -2,13 +2,13 @@ define( ["three", "scene","variable","stack","color"], function ( THREE, scene, 
 
          function spawnBlock(index){
 
-             var block1=  new THREE.Mesh(
-                 new THREE.BoxGeometry(10,10,10),
-                 new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME}))        ;
-                 var block;
+             var block;
              var rand = Math.floor(Math.random() * 2);
              if(stack.length != 0){
-                 block= block1.clone();
+                 block = new THREE.Mesh(
+                     new THREE.BoxGeometry(10,10,10),
+                     new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
+                 );
                  //left block
                  if(rand == 0){
                      block.position.x = (stack[stack.length - 1].position.x) + 10.1;

@@ -13,7 +13,7 @@ define(["variable","meshPlayer","camera", "resetBlock","diff"], function (variab
             //camera.lookAt(new THREE.Vector3(0,player.height,0));
             camera.lookAt(meshPlayer.position);
             variable.lastPosition = null;
-            variable.player.speed=1;
+            //variable.player.speed=1;
             variable.player.direction=0;
             variable.player.downSpeed=0.0001;
             variable.playerScore =0;
