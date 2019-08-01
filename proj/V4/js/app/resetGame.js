@@ -19,6 +19,17 @@ define(["variable","meshPlayer","camera", "resetBlock","diff"], function (variab
             variable.playerScore =0;
             //diff.playerdiffText= null;
             //stack =[];
+           /*
+            document.getElementById("Difficulte").innerHTML="";
+            document.getElementById("Difficulte").innerHTML="Difficulte";
+
+           variable.Facile = document.createElement('button');
+            variable.Facile.innerHTML = "Facile" ;
+            variable.Facile.id="Facile";
+
+           console.log(variable.Facile);
+            document.body.appendChild(variable.Facile);
+*/
             resetBlock();
 
         }

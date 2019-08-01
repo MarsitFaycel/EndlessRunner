@@ -1,5 +1,5 @@
-define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pauseMenu","score","updatePlayer","diff","controls","spawnBlock", "checkBlockHit","stack","resetGame","stat"],
-    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pauseMenu,score,updatePlayer,diff,controls,spawnBlock,checkBlockHit,stack,resetGame,stat) {
+define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pauseMenu","score","updatePlayer","diff","controls","spawnBlock", "checkBlockHit","stack","resetGame","stat","startMenu"],
+    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pauseMenu,score,updatePlayer,diff,controls,spawnBlock,checkBlockHit,stack,resetGame,stat,startMenu) {
         var app = {
             //meshes: [],
 
@@ -26,11 +26,11 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                 scene.add(startZone);
                 scene.add(ambientLight);
                 scene.add(light);
-                variable.instructions.innerHTML = "<strong>Click to Play!</strong> </br></br> TAB Key  =change direction ";
+                variable.instructions.innerHTML = "<strong>Press Echap to Play!</strong> </br></br> TAB Key  =change direction ";
 
                 window.addEventListener('resize', app.onWindowResize, false);
 
-                document.body.appendChild(renderer.domElement);
+                //document.body.appendChild(renderer.domElement);
                 //document.getElementById("Jeux").appendChild(renderer.domElement);
 
            },
@@ -46,9 +46,11 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                     requestAnimationFrame(app.animate);
                 }
                 if(variable.paused == 1){
-                   pauseMenu(1);
+
+                    pauseMenu(1);
                     requestAnimationFrame(app.pause);
                 }
+                startMenu();
                 score.score();
                 diff.diff();
                 updatePlayer.updatePlayer();
@@ -103,12 +105,11 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
 
                  stat.begin()
             if(variable.paused == 0){
-                variable.jeux.innerHTML = "Play" ;
+                
 
                 requestAnimationFrame(app.animate);
             }
             if(variable.paused == 1){
-                variable.jeux.innerHTML = "Pause" ;
 
                 requestAnimationFrame(app.pause);
 

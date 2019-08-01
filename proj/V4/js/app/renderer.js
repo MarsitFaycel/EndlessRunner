@@ -7,6 +7,10 @@ define( ["three"], function ( THREE ) {
 
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.BasicShadowMap;
+    var container = document.getElementById('world');
+    container.appendChild(renderer.domElement);
+    document.body.appendChild(renderer.domElement);
+
 
 
 

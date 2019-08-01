@@ -12,6 +12,7 @@ define(["stack" , "scene" ],
                 new THREE.MeshPhongMaterial({color:0x00CC2C})
             );
             //left block
+
             if(rand == 0){
                 block.position.x = (stack[stack.length - 1].position.x) + 5.1;
                 block.position.z = (stack[stack.length - 1].position.z);
