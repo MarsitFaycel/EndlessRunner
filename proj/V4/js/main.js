@@ -43,6 +43,7 @@ require( [ 'app','variable','diff','stat'], function (  app, variable, diff,stat
         variable.keyboard[event.keyCode] = true;
         if(event.keyCode == 32 ) //tab
             variable.pressed = 1;
+
         if(event.keyCode == 27 &&  variable.alive == 0  ){ //echap
             variable.paused ==1 ?  variable.paused = 0 :  variable.paused = 1;
             variable.start  == 0 ? variable.start = 1: variable.start =2;
@@ -59,8 +60,17 @@ require( [ 'app','variable','diff','stat'], function (  app, variable, diff,stat
         if(event.keyCode == 32 )
             variable.pressed = 0;
     }
+    function mouseDown(){
+
+            variable.pressed == 1  ? variable.pressed =0 :variable.pressed =1;
+        console.log("clickup")
+    }
+
     window.addEventListener('keydown', keyDown);
     window.addEventListener('keyup', keyUp);
+    window.addEventListener('mousedown', mouseDown);
+    window.addEventListener('touchstart', mouseDown);
+
 
 
 

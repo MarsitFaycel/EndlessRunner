@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width"> <!-- fix delay on google chrome -->
-
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+   
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/game.css">
     <title>demo4 three js et AMD</title>
@@ -17,26 +17,19 @@
 
 <div class="header">
 <div class="score" id="score">
-    <div class="score__content" id="level">
-        <div class="score__label">level</div>
-        <div class="score__value score__value--level" id="levelValue">1</div>
-        <svg class="level-circle" id="levelCircle" viewbox="0 0 200 200">
-            <circle id="levelCircleBgr" r="80" cx="100" cy="100" fill="none" stroke="#d1b790" stroke-width="24px" />
-            <circle id="levelCircleStroke" r="80" cx="100" cy="100" fill="none" #f25346 stroke="#68c3c0" stroke-width="14px" stroke-dasharray="502" />
-        </svg>
-    </div>
+
     <div class="score__content" id="dist">
-        <div class="score__label">Score</div>
+
         <div class="score__value score__value--dist" id="distValue">000</div>
     </div>
-    <div class="score__content" id="energy">
-        <div class="score__label">energy</div>
-        <div class="score__value score__value--energy" id="energyValue">
-            <div class="energy-bar" id="energyBar"></div>
-        </div>
-    </div>
+
 </div>
     <div id="world"></div>
+</div>
+
+<div class="responsive">
+    Tournez votre télephone
+
 </div>
 
 

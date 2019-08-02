@@ -173,13 +173,35 @@
 	50% { opacity: 0; }
 	100% { opacity: 1; }
 }
+.responsive{
+	display: none;
+}
 
 @media screen and (max-width: 40em) {
+	html body *{
+		display: none;
+	}
+
+	.responsive{
+		display: block;
+		color: black;
+		left: 100px;
+		top: 50%;
+		margin-top: 300px;
+		text-align: center;
+
+
+
+
+	}
 	.header {
 		font-size: 0.75em;
 		top: 6.5em;
+		display: none;
+
 	}
 	.header h2 {
 		letter-spacing: 0.65em;
+		display: none;
 	}
 }

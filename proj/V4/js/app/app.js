@@ -105,7 +105,7 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
 
                  stat.begin()
             if(variable.paused == 0){
-                
+
 
                 requestAnimationFrame(app.animate);
             }
