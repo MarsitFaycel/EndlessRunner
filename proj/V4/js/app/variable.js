@@ -18,6 +18,8 @@ define( [], function () {
         Facile: document.getElementById('Facile'),
         Difficile: document.getElementById('Difficile'),
         Intermediaire: document.getElementById('Intermediaire'),
-        start:0, // start on  = 0, start off =1
+        start:0, // start on  = 0, start off =1;
+        count : 4,
+        levelCircle :document.getElementById("levelCircleStroke"),
     };
 } );

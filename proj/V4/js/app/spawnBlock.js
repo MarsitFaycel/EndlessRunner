@@ -5,10 +5,16 @@ define( ["three", "scene","variable","stack","color"], function ( THREE, scene, 
              var block;
              var rand = Math.floor(Math.random() * 2);
              if(stack.length != 0){
-                 block = new THREE.Mesh(
+                 if(window.innerWidth<745){block = new THREE.Mesh(
                      new THREE.BoxGeometry(10,10,10),
-                     new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
-                 );
+                     new THREE.MeshNormalMaterial({color: color, wireframe:variable.USE_WIREFRAME})
+                 );}else{
+                     block = new THREE.Mesh(
+                         new THREE.BoxGeometry(10,10,10),
+                         new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
+                     );
+                 }
+
                  //left block
                  if(rand == 0){
                      block.position.x = (stack[stack.length - 1].position.x) + 10.1;
@@ -34,10 +40,15 @@ define( ["three", "scene","variable","stack","color"], function ( THREE, scene, 
 
              }
              else{
-                 block = new THREE.Mesh(
+                 if(window.innerWidth<745){block = new THREE.Mesh(
                      new THREE.BoxGeometry(10,10,10),
-                     new THREE.MeshPhongMaterial({color:0x5E3C58, wireframe:variable.USE_WIREFRAME})
-                 );
+                     new THREE.MeshNormalMaterial({color: color, wireframe:variable.USE_WIREFRAME})
+                 );}else{
+                     block = new THREE.Mesh(
+                         new THREE.BoxGeometry(10,10,10),
+                         new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
+                     );
+                 }
                  block.position.x = 17.5;
                  block.position.z = 22.6;
                  block.position.y = -5;

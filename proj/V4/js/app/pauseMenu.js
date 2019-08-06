@@ -21,6 +21,16 @@ define( ["three","app","variable","meshPlayer","camera","scene","textPRESSENTERT
                         menu.position.z = variable.lastPosition.z-4;
                         menu.position.y = variable.lastPosition.y+4;
                     }
+                    if(variable.start == 0){
+
+                        var e=document.getElementById("demo");
+                        e.style.display = "block";
+                        variable.start =1;
+                    }else{
+                        var e=document.getElementById("demo");
+                        e.style.display = "none";
+
+                    }
                     //console.log(alive);
                     //console.log('x: ' + menu.position.x + ' y: '+menu.position.y+' z: '+menu.position.z);
                     //console.log('x: ' + lastPosition.x + ' y: '+lastPosition.y+' z: '+lastPosition.z);
@@ -40,6 +50,7 @@ define( ["three","app","variable","meshPlayer","camera","scene","textPRESSENTERT
 
                 }
                 else{
+
                     textPRESSENTERTORESETGAME(0);
                     textPAUSED(0);
                     scene.remove(menu);

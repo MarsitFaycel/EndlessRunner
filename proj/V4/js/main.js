@@ -46,8 +46,9 @@ require( [ 'app','variable','diff','stat'], function (  app, variable, diff,stat
 
         if(event.keyCode == 27 &&  variable.alive == 0  ){ //echap
             variable.paused ==1 ?  variable.paused = 0 :  variable.paused = 1;
-            variable.start  == 0 ? variable.start = 1: variable.start =2;
-            console.log("echec pressed"+variable.alive)
+
+            console.log("echec pressed"+variable.alive);
+
         }
 
         if(event.keyCode == 13){ // entrer

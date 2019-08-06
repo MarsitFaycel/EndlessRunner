@@ -1,15 +1,24 @@
-define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pauseMenu","score","updatePlayer","diff","controls","spawnBlock", "checkBlockHit","stack","resetGame","stat","startMenu"],
-    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pauseMenu,score,updatePlayer,diff,controls,spawnBlock,checkBlockHit,stack,resetGame,stat,startMenu) {
+define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable","ambientLight","pauseMenu","score","updatePlayer","diff","controls","spawnBlock", "checkBlockHit","stack","resetGame","stat","startMenu","countdown"],
+    function ( THREE, camera,  light, renderer, scene,meshPlayer,variable ,ambientLight,pauseMenu,score,updatePlayer,diff,controls,spawnBlock,checkBlockHit,stack,resetGame,stat,startMenu,countdown) {
         var app = {
             //meshes: [],
 
             init: function () {
+
+               if(window.innerWidth <745){
+                   var startZone = new THREE.Mesh(
+                       new THREE.PlaneGeometry(40,40, 50,50),
+                       // MeshBasicMaterial does not react to lighting, so we replace with MeshPhongMaterial
+                       new THREE.MeshNormalMaterial({color:0x5E3C58, wireframe:variable.USE_WIREFRAME})
+                       // See threejs.org/examples/ for other material types
+                   );
+                }else{
                 var startZone = new THREE.Mesh(
                     new THREE.PlaneGeometry(40,40, 50,50),
                     // MeshBasicMaterial does not react to lighting, so we replace with MeshPhongMaterial
                     new THREE.MeshPhongMaterial({color:0x5E3C58, wireframe:variable.USE_WIREFRAME})
                     // See threejs.org/examples/ for other material types
-                );
+                );}
 
 
                 startZone.rotation.x -= Math.PI / 2;
@@ -26,7 +35,7 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
                 scene.add(startZone);
                 scene.add(ambientLight);
                 scene.add(light);
-                variable.instructions.innerHTML = "<strong>Press Echap to Play!</strong> </br></br> TAB Key  =change direction ";
+                variable.instructions.innerHTML = "<strong>Press Echap to Play!</strong> </br></br> TAB Key OR TAP  =change direction ";
 
                 window.addEventListener('resize', app.onWindowResize, false);
 
@@ -37,20 +46,29 @@ define( ["three", "camera", "light", "renderer", "scene","meshPlayer","variable"
             animate: function () {
 
 
-
                 stat.begin()
 
                 const GRAVITY_RATE = -9.81;
+
+
                 if(variable.paused == 0 ){
-                   pauseMenu(0);
+
+                    pauseMenu(0);
+
                     requestAnimationFrame(app.animate);
+
                 }
+
+
+
+
                 if(variable.paused == 1){
 
                     pauseMenu(1);
                     requestAnimationFrame(app.pause);
                 }
-                startMenu();
+                //countdown(0);
+                //startMenu();
                 score.score();
                 diff.diff();
                 updatePlayer.updatePlayer();

@@ -1,4 +1,4 @@
-define(["variable","meshPlayer","camera", "resetBlock","diff"], function (variable,meshPlayer,camera,resetBlock,diff) {
+define(["variable","meshPlayer","camera", "resetBlock","diff","countdown"], function (variable,meshPlayer,camera,resetBlock,diff,countdown) {
     function resetGame(){
         //location.reload();
         if(variable.gameReset == 1){
@@ -31,6 +31,7 @@ define(["variable","meshPlayer","camera", "resetBlock","diff"], function (variab
             document.body.appendChild(variable.Facile);
 */
             resetBlock();
+
 
         }
     }
