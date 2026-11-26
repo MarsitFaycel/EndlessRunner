@@ -1,21 +1,15 @@
-define( ["three", "scene","variable"], function ( THREE, scene, variable ) {
+// Affiche le score (nombre de blocs touchés) en haut de l'écran.
+define( ["variable"], function ( variable ) {
 
-    var score= {
-        playerScoreText: document.getElementById("distValue"),
+    var scoreText = document.getElementById("distValue");
+    var shownScore = -1;
+
+    return {
         score: function () {
-
-            if (score.playerScoreText == null) {
-                //console.log(score.playerScoreText.color)
-            } else {
-                score.playerScoreText.innerHTML = "SCORE:" + variable.playerScore;
-
+            if (scoreText && shownScore !== variable.playerScore) {   // on ne touche au DOM que si le score change
+                shownScore = variable.playerScore;
+                scoreText.textContent = "SCORE:" + shownScore;
             }
-
         }
     };
-
-
-
-
-    return score;
 } );

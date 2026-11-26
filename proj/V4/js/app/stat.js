@@ -1,9 +1,12 @@
-define(["stats"],
-    function(stats){
-        var stat = new stats();
-        stat.showPanel( 2);
-        //console.log(stat)
-        document.body.appendChild( stat.domElement );
+// Compteur de performances (stats.js), affiché seulement avec index.html?debug.
+define( ["stats"], function ( Stats ) {
 
+    if (!/[?&]debug\b/.test(window.location.search)) {
+        return { begin: function () {}, end: function () {} };
+    }
+
+    var stat = new Stats();
+    stat.showPanel(0);   // 0 : FPS, 1 : ms par image, 2 : mémoire
+    document.body.appendChild(stat.domElement);
     return stat;
-    })
+});

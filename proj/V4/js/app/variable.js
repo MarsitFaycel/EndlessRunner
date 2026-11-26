@@ -1,27 +1,21 @@
+// État partagé du jeu.
 define( [], function () {
 
     return {
-        USE_WIREFRAME : false,
-        paused : 1,
-        alive: 0,
-        lastPosition : null ,
-        gameReset : 0,
-        keyboard : {},
-        pressed: 0,
-        pressEnterToReset: null,
-        playerScore : 0,
+        USE_WIREFRAME: false,
+        IS_MOBILE: window.innerWidth < 745,   // matériaux plus légers sur petit écran
+
         INITIAL_SPEED: 1,
-        MAX_SPEED: 2.5,   // au-delà, la bille pourrait sauter par-dessus un bloc
-        player :{ height:1.8, speed:1, turnSpeed:Math.PI*0.02, direction:0, downSpeed:0.0001 },
-        playerdiff: {debutant:"debutant",intermediaire:"intermediaire", difficile:"difficile"},
-        timeDead :0,
-        instructions : document.getElementById('instructions'),
-        jeux: document.getElementById('Jeux'),
-        Facile: document.getElementById('Facile'),
-        Difficile: document.getElementById('Difficile'),
-        Intermediaire: document.getElementById('Intermediaire'),
-        start:0, // start on  = 0, start off =1;
-        count : 4,
-        levelCircle :document.getElementById("levelCircleStroke"),
+        MAX_SPEED: 2.5,          // au-delà, la bille pourrait sauter par-dessus un bloc
+
+        paused: 1,               // 1 = en pause (le jeu démarre en pause)
+        alive: 0,                // 0 = en vie, 1 = mort (Game Over)
+        gameReset: 0,            // 1 = relancer la partie à la prochaine image
+        pressed: 0,              // 1 = virage demandé, 2 = virage déjà appliqué
+        lastPosition: null,      // position du joueur au moment de sa chute
+        playerScore: 0,
+        player: { speed: 1, direction: 0, downSpeed: 0.0001 },   // direction : 0 = +x, 1 = +z
+
+        instructions: document.getElementById('instructions')
     };
 } );

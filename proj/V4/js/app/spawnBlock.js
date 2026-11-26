@@ -5,7 +5,7 @@ define( ["three", "scene","variable","stack","color"], function ( THREE, scene, 
     // Une seule géométrie et un seul matériau partagés par tous les blocs
     // (avant : 300 géométries + 300 matériaux recréés à chaque partie, jamais libérés).
     var geometry = new THREE.BoxGeometry(10, 10, 10);
-    var material = window.innerWidth < 745
+    var material = variable.IS_MOBILE
         ? new THREE.MeshNormalMaterial({wireframe: variable.USE_WIREFRAME})
         : new THREE.MeshPhongMaterial({color: color, wireframe: variable.USE_WIREFRAME});
 

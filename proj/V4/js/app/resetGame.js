@@ -1,42 +1,26 @@
-define(["variable","meshPlayer","camera","spawnBlock","world"], function (variable,meshPlayer,camera,spawnBlock,world) {
-    function resetGame(){
-        //location.reload();
-        if(variable.gameReset == 1){
-            variable.gameReset = 0;
-            variable.alive = 0;
-            meshPlayer.position.x = 0;
-            meshPlayer.position.y = 0.65;
-            meshPlayer.position.z = 0;
-            variable.paused = 0;
-            meshPlayer.add(camera);
-            camera.position.set(-10, 10, -10);
-            //camera.lookAt(new THREE.Vector3(0,player.height,0));
-            camera.lookAt(meshPlayer.position);
-            variable.lastPosition = null;
-            variable.player.speed = variable.INITIAL_SPEED;   // sinon chaque partie démarre plus vite
-            variable.player.direction=0;
-            variable.player.downSpeed=0.0001;
-            variable.playerScore =0;
-            variable.timeDead = 0;
-            //diff.playerdiffText= null;
-            //stack =[];
-           /*
-            document.getElementById("Difficulte").innerHTML="";
-            document.getElementById("Difficulte").innerHTML="Difficulte";
+// Relance une partie après un Game Over (touche Entrée).
+define( ["variable", "meshPlayer", "camera", "spawnBlock", "world"], function ( variable, meshPlayer, camera, spawnBlock, world ) {
 
-           variable.Facile = document.createElement('button');
-            variable.Facile.innerHTML = "Facile" ;
-            variable.Facile.id="Facile";
+    function resetGame() {
+        if (variable.gameReset != 1) return;
 
-           console.log(variable.Facile);
-            document.body.appendChild(variable.Facile);
-*/
-            world.reset();
-            spawnBlock.resetAll();   // réutilise les blocs existants
+        variable.gameReset = 0;
+        variable.alive = 0;
+        variable.paused = 0;
+        variable.lastPosition = null;
+        variable.playerScore = 0;
+        variable.player.speed = variable.INITIAL_SPEED;
+        variable.player.direction = 0;
+        variable.player.downSpeed = 0.0001;
 
+        meshPlayer.position.set(0, 0.65, 0);
+        meshPlayer.add(camera);
+        camera.position.set(-10, 10, -10);
+        camera.lookAt(meshPlayer.position);
 
-        }
+        world.reset();
+        spawnBlock.resetAll();   // réutilise les blocs existants
     }
-    return resetGame;
 
-})
+    return resetGame;
+});

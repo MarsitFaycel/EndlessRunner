@@ -7,7 +7,7 @@ define( ["three", "scene", "variable", "meshPlayer", "stack", "light"],
 
     var startZone = new THREE.Mesh(
         new THREE.PlaneGeometry(40, 40, 50, 50),
-        window.innerWidth < 745
+        variable.IS_MOBILE
             ? new THREE.MeshNormalMaterial({wireframe: variable.USE_WIREFRAME})
             : new THREE.MeshPhongMaterial({color: 0x5E3C58, wireframe: variable.USE_WIREFRAME})
     );

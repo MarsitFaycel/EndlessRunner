@@ -1,40 +1,39 @@
-define( ["three","variable","meshPlayer","camera","scene","textPRESSENTERTORESETGAME","textPAUSED"],
-    function (THREE, variable, meshPlayer, camera, scene, textPRESSENTERTORESETGAME, textPAUSED) {
+// Voile semi-transparent devant la caméra en pause ou au Game Over,
+// animation "Ready 3-2-1" avant le premier départ, message "rejouer" après une chute.
+define( ["three", "variable", "meshPlayer", "camera", "scene", "gameOverMessage"],
+    function ( THREE, variable, meshPlayer, camera, scene, gameOverMessage ) {
 
-        // Cube semi-transparent créé une seule fois (avant : un nouveau cube à chaque image
-        // pendant le Game Over, jamais supprimé de la scène -> fuite mémoire).
-        var menu = new THREE.Mesh(
+        var veil = new THREE.Mesh(
             new THREE.BoxGeometry(15, 15, 15),
             new THREE.MeshPhongMaterial({color: 0x000000, wireframe: variable.USE_WIREFRAME, transparent: true, opacity: 0.5})
         );
-        menu.receiveShadow = true;
-        menu.castShadow = true;
+        var intro = document.getElementById("demo");
+        var introPlayed = false;
+
+        function setIntroVisible(visible) {
+            if (intro) intro.style.display = visible ? "block" : "none";
+        }
 
         function pauseMenu(on) {
             if (on === 1) {
                 var origin = variable.alive === 1 ? variable.lastPosition : meshPlayer.position;
-                menu.position.set(origin.x - 4, origin.y + 4, origin.z - 4);
-                menu.quaternion.copy(camera.quaternion);
+                veil.position.set(origin.x - 4, origin.y + 4, origin.z - 4);
+                veil.quaternion.copy(camera.quaternion);
+                if (!veil.parent) scene.add(veil);
 
-                var demo = document.getElementById("demo");
-                if (variable.start == 0) {
-                    demo.style.display = "block";
-                    variable.start = 1;
-                } else {
-                    demo.style.display = "none";
+                // L'animation d'intro n'est jouée qu'une fois, pendant l'attente du premier départ.
+                if (!introPlayed && variable.alive === 0) {
+                    introPlayed = true;
+                    setIntroVisible(true);
                 }
-
-                if (!menu.parent) scene.add(menu);
-
-                if (variable.alive === 1) {
-                    textPRESSENTERTORESETGAME(1);
-                } else {
-                    textPAUSED(1);
-                }
+                gameOverMessage(variable.alive === 1);
             } else {
-                textPRESSENTERTORESETGAME(0);
-                textPAUSED(0);
-                if (menu.parent) scene.remove(menu);
+                if (veil.parent) {
+                    scene.remove(veil);
+                    gameOverMessage(false);
+                    setIntroVisible(false);
+                    if (variable.instructions) variable.instructions.textContent = "";
+                }
             }
         }
 
