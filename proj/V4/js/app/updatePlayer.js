@@ -15,7 +15,7 @@ define( ["variable","meshPlayer","light"], function ( variable, meshPlayer, ligh
             }
 
             // Accélération progressive au fil de la partie.
-            variable.player.speed += 0.0001 * step;
+            variable.player.speed = Math.min(variable.player.speed + 0.0001 * step, variable.MAX_SPEED);
         }
     };
 

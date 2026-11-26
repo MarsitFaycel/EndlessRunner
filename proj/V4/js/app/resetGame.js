@@ -1,4 +1,4 @@
-define(["variable","meshPlayer","camera", "resetBlock","diff","countdown"], function (variable,meshPlayer,camera,resetBlock,diff,countdown) {
+define(["variable","meshPlayer","camera","spawnBlock","world"], function (variable,meshPlayer,camera,spawnBlock,world) {
     function resetGame(){
         //location.reload();
         if(variable.gameReset == 1){
@@ -31,7 +31,8 @@ define(["variable","meshPlayer","camera", "resetBlock","diff","countdown"], func
            console.log(variable.Facile);
             document.body.appendChild(variable.Facile);
 */
-            resetBlock();
+            world.reset();
+            spawnBlock.resetAll();   // réutilise les blocs existants
 
 
         }

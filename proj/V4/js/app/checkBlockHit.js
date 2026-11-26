@@ -1,36 +1,31 @@
-define(["three","meshPlayer","stack","variable","camera"] , function(THREE, meshPlayer,stack,variable,camera){
+define(["three","meshPlayer","stack","variable","camera","world"] , function(THREE, meshPlayer, stack, variable, camera, world){
 
-     function checkBlockHit() {
+    var HIT_HALF_SIZE = 5.7;   // demi-taille d'un bloc + petite tolérance
 
-        var hit = 0;
+    function checkBlockHit() {
+        if (variable.alive !== 0) return;   // déjà mort : rien à vérifier
 
-        if(meshPlayer.position.x < 20 && meshPlayer.position.z < 20){
-            hit =1;
-        }
-        for(var i=0; i<300 ; i++){
-            if(meshPlayer.position.x <= stack[i].position.x+5.7 && meshPlayer.position.x >= stack[i].position.x-5.7){
-                if(meshPlayer.position.z <= stack[i].position.z+5.7 && meshPlayer.position.z >= stack[i].position.z-5.7){
-                    if(stack[i].hit === 0){
-                        variable.playerScore++
-                        stack[i].hit = 1;
-                    }
-                    hit = 1;
+        var p = meshPlayer.position;
+        var onGround = world.isOnStartZone(p);
+
+        for (var i = 0; i < stack.length; i++) {
+            var b = stack[i].position;
+            if (Math.abs(p.x - b.x) <= HIT_HALF_SIZE && Math.abs(p.z - b.z) <= HIT_HALF_SIZE) {
+                if (stack[i].hit === 0) {
+                    variable.playerScore++;
+                    stack[i].hit = 1;
                 }
+                onGround = true;
             }
         }
 
-        if(hit === 0){
-            if(variable.lastPosition == null){
+        if (!onGround) {
+            if (variable.lastPosition == null) {
                 meshPlayer.remove(camera);
-                variable.lastPosition = new THREE.Vector3(meshPlayer.position.x, meshPlayer.position.y, meshPlayer.position.z);
+                variable.lastPosition = p.clone();
             }
             variable.alive = 1;
         }
-
-
     }
     return checkBlockHit;
-
-
-
-})
+});
