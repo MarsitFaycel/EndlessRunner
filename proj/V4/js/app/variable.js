@@ -10,6 +10,7 @@ define( [], function () {
         pressed: 0,
         pressEnterToReset: null,
         playerScore : 0,
+        INITIAL_SPEED: 1,
         player :{ height:1.8, speed:1, turnSpeed:Math.PI*0.02, direction:0, downSpeed:0.0001 },
         playerdiff: {debutant:"debutant",intermediaire:"intermediaire", difficile:"difficile"},
         timeDead :0,

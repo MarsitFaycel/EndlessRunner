@@ -1,30 +1,31 @@
 define(["variable"], function (variable) {
 
-     function textPRESSENTERTORESETGAME(on){
-        if(on === 1){
+    // Créé une seule fois puis affiché / masqué (avant : un nouveau <div> à chaque image).
+    var message = null;
 
-            variable.pressEnterToReset = document.createElement('div');
-            variable.pressEnterToReset.style.position = 'absolute';
-            //pause.pressEnterToReset.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
-            variable.pressEnterToReset.style.width = 60+"%";
-            variable.pressEnterToReset.style.height = 100;
-            variable.pressEnterToReset.style.opacity = 0.7;
-            variable.pressEnterToReset.style.fontSize = "xx-large";
-            variable.pressEnterToReset.style.fontFamily = "Impact,Charcoal,sans-serif";
-            variable.pressEnterToReset.innerHTML = "Taper ENTER pour rejouer" ;
-            variable.pressEnterToReset.style.color ="white" ;
+    function createMessage() {
+        message = document.createElement('div');
+        message.style.position = 'absolute';
+        message.style.width = 60 + "%";
+        message.style.opacity = 0.7;
+        message.style.fontSize = "xx-large";
+        message.style.fontFamily = "Impact,Charcoal,sans-serif";
+        message.style.color = "white";
+        message.style.display = "none";
+        message.innerHTML = "Taper ENTER pour rejouer";
+        document.body.appendChild(message);
+    }
 
-            //pause.pressEnterToReset.style.top = window.innerWidth/2 + 'px';
-            //pause.pressEnterToReset.style.left = window.innerHeight/2 + 'px';
+    function textPRESSENTERTORESETGAME(on) {
+        if (message === null) createMessage();
 
-            variable.pressEnterToReset.style.top = window.innerHeight/2 + 'px';
-            variable.pressEnterToReset.style.left = window.innerWidth/2-150 + 'px';
-            document.body.appendChild(variable.pressEnterToReset);
-        }
-        else{
-            if(variable.pressEnterToReset !== undefined)
-                variable.pressEnterToReset.innerHTML = "";
+        if (on === 1) {
+            message.style.top = window.innerHeight / 2 + 'px';
+            message.style.left = window.innerWidth / 2 - 150 + 'px';
+            message.style.display = "block";
+        } else {
+            message.style.display = "none";
         }
     }
     return textPRESSENTERTORESETGAME;
-})
+});

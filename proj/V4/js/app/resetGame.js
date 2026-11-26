@@ -13,10 +13,11 @@ define(["variable","meshPlayer","camera", "resetBlock","diff","countdown"], func
             //camera.lookAt(new THREE.Vector3(0,player.height,0));
             camera.lookAt(meshPlayer.position);
             variable.lastPosition = null;
-            //variable.player.speed=1;
+            variable.player.speed = variable.INITIAL_SPEED;   // sinon chaque partie démarre plus vite
             variable.player.direction=0;
             variable.player.downSpeed=0.0001;
             variable.playerScore =0;
+            variable.timeDead = 0;
             //diff.playerdiffText= null;
             //stack =[];
            /*

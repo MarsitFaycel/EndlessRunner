@@ -39,40 +39,39 @@ require( [ 'app','variable','diff','stat'], function (  app, variable, diff,stat
     app.animate();
 
 
+    function turn(){
+        // Ignoré en pause / après la mort, sinon le virage s'appliquerait à la reprise.
+        if(variable.paused == 0 && variable.alive == 0)
+            variable.pressed = 1;   // lu par controls.js à la prochaine image
+    }
+
     function keyDown(event){
         variable.keyboard[event.keyCode] = true;
-        if(event.keyCode == 32 ) //tab
-            variable.pressed = 1;
 
-        if(event.keyCode == 27 &&  variable.alive == 0  ){ //echap
-            variable.paused ==1 ?  variable.paused = 0 :  variable.paused = 1;
-
-            console.log("echec pressed"+variable.alive);
-
+        if(event.keyCode == 32){ // Espace = changer de direction
+            event.preventDefault();          // évite le défilement de la page
+            if(!event.repeat) turn();        // touche maintenue : un seul virage
         }
 
-        if(event.keyCode == 13){ // entrer
-           variable.gameReset = 1;
+        if(event.keyCode == 27 && variable.alive == 0){ // Echap = pause / reprendre
+            variable.paused = variable.paused == 1 ? 0 : 1;
         }
 
+        // Entrée = rejouer, seulement après un Game Over
+        // (avant : appuyer pendant la partie relançait le jeu dès la mort suivante).
+        if(event.keyCode == 13 && variable.alive == 1){
+            variable.gameReset = 1;
+        }
     }
+
     function keyUp(event){
         variable.keyboard[event.keyCode] = false;
-        if(event.keyCode == 32 )
-            variable.pressed = 0;
-    }
-    function mouseDown(){
-
-            variable.pressed == 1  ? variable.pressed =0 :variable.pressed =1;
-        console.log("clickup")
     }
 
     window.addEventListener('keydown', keyDown);
     window.addEventListener('keyup', keyUp);
-    window.addEventListener('mousedown', mouseDown);
-    window.addEventListener('touchstart', mouseDown);
-
-
-
+    // pointerdown couvre souris ET tactile en un seul événement
+    // (avant : touchstart + mousedown -> un tap pouvait faire deux virages).
+    window.addEventListener('pointerdown', turn);
 
 } );

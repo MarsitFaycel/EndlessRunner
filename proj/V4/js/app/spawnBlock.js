@@ -1,69 +1,45 @@
-define( ["three", "scene","variable","stack","color"], function ( THREE, scene, variable, stack,color ){
+define( ["three", "scene","variable","stack","color"], function ( THREE, scene, variable, stack, color ){
 
-         function spawnBlock(index){
+    // Dernier bloc posé au bout du parcours : le suivant se place à sa gauche ou à sa droite.
+    var lastBlock = null;
 
-             var block;
-             var rand = Math.floor(Math.random() * 2);
-             if(stack.length != 0){
-                 if(window.innerWidth<745){block = new THREE.Mesh(
-                     new THREE.BoxGeometry(10,10,10),
-                     new THREE.MeshNormalMaterial({color: color, wireframe:variable.USE_WIREFRAME})
-                 );}else{
-                     block = new THREE.Mesh(
-                         new THREE.BoxGeometry(10,10,10),
-                         new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
-                     );
-                 }
+    // Place `block` juste après le dernier bloc du parcours et le remet à l'état "neuf".
+    function placeAtEnd(block) {
+        if (lastBlock === null) {
+            // Premier bloc, au bord de la zone de départ.
+            block.position.x = 17.5;
+            block.position.z = 22.6;
+        } else if (Math.random() < 0.5) {
+            block.position.x = lastBlock.position.x + 10.1;   // bloc à gauche
+            block.position.z = lastBlock.position.z;
+        } else {
+            block.position.x = lastBlock.position.x;
+            block.position.z = lastBlock.position.z + 10.1;   // bloc à droite
+        }
+        block.position.y = -5;
+        block.hit = 0;            // 1 dès que le joueur l'a touché
+        block.deathTimeout = 0;   // temps avant que le bloc touché ne tombe
+        lastBlock = block;
+    }
 
-                 //left block
-                 if(rand == 0){
-                     block.position.x = (stack[stack.length - 1].position.x) + 10.1;
-                     block.position.z = (stack[stack.length - 1].position.z);
-                 }
-                 //right block
-                 else{
-                     block.position.z = (stack[stack.length - 1].position.z) + 10.1;
-                     block.position.x = (stack[stack.length - 1].position.x) ;
-                 }
-                 //block.position.x = 2;
-                 //block.position.z = 2;
-                 block.position.y = -5;
-                 block.receiveShadow = true;
-                 block.castShadow = true;
-                 //0 if the player has not hit the block
-                 //1 if the player has hit the block
-                 block.hit = 0;
-                 //time after death before block starts falling
-                 block.deathTimeout =0;
-                 stack.push(block);
-                 scene.add(stack[index]);
+    function spawnBlock(index){
+        if (stack.length === 0) lastBlock = null;   // nouvelle partie
 
-             }
-             else{
-                 if(window.innerWidth<745){block = new THREE.Mesh(
-                     new THREE.BoxGeometry(10,10,10),
-                     new THREE.MeshNormalMaterial({color: color, wireframe:variable.USE_WIREFRAME})
-                 );}else{
-                     block = new THREE.Mesh(
-                         new THREE.BoxGeometry(10,10,10),
-                         new THREE.MeshPhongMaterial({color: color, wireframe:variable.USE_WIREFRAME})
-                     );
-                 }
-                 block.position.x = 17.5;
-                 block.position.z = 22.6;
-                 block.position.y = -5;
-                 block.hit = 0;
-                 block.deathTimeout =0;
-                 block.receiveShadow = true;
-                 block.castShadow = true;
-                 stack.push(block);
-                 scene.add(stack[0]);
+        var material = window.innerWidth < 745
+            ? new THREE.MeshNormalMaterial({color: color, wireframe: variable.USE_WIREFRAME})
+            : new THREE.MeshPhongMaterial({color: color, wireframe: variable.USE_WIREFRAME});
+        var block = new THREE.Mesh(new THREE.BoxGeometry(10, 10, 10), material);
+        block.receiveShadow = true;
+        block.castShadow = true;
 
-             }
+        placeAtEnd(block);
+        stack.push(block);
+        scene.add(block);
+    }
 
-
-         }
-
+    // Parcours infini : un bloc tombé hors de vue est recyclé au bout du chemin
+    // (avant : 300 blocs fixes, le joueur tombait dans le vide une fois au bout).
+    spawnBlock.recycle = placeAtEnd;
 
     return spawnBlock;
 });
